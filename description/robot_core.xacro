@@ -119,7 +119,7 @@
     <!-- CASTER WHEEL LINK -->
     
     <joint name="caster_wheel_joint" type="fixed">
-        <parent link="chassis"/>          <!-- we want caster wheel to be attached to chassis. It will be fixed joint but frictionless to keep simple -->
+        <parent link="chassis"/>          <!-- we want caster wheel to be attached to chassis. It will be fixed joint but frictionless to keep movement simple -->
         <child link="caster_wheel"/>
         <origin xyz="0.24 0 0" rpy="0 0 0"/>
     </joint>
@@ -143,6 +143,8 @@
 
     <gazebo reference="caster_wheel">
         <material>Gazebo/Black</material>
+        <mu1 value="0.001"/>      <!-- mu1 and mu2 are slightly diff friction coefficients. Not =0 in case there's a divide by 0 somewhere. -->
+        <mu2 value="0.001"/>
     </gazebo>
 
 </robot>

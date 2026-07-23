@@ -16,7 +16,7 @@
             <max_linear_acceleration>0.33</max_linear_acceleration>
 
             <!-- Input -->
-            <topic>cmd_vel</topic>           <!-- This is the topic that the plugin will subscribe to for velocity commands.-->
+            <topic>/cmd_vel</topic>           <!-- This is the topic that the plugin will subscribe to for velocity commands.-->
 
 
             <!-- Output-->
